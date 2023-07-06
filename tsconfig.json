@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["es6"],
+    "target": "es6",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "include": ["controller/**/*", "model/**/*", "/**/*.ts"],
+  "exclude": ["node_modules"]
+}
