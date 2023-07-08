@@ -34,6 +34,17 @@ class SoccerField implements SoccerFieldT {
 	addReservedTimeSlot(startTime, endTime) {
 		this.reservedTimeslots.push({ startTime, endTime });
 	}
+
+	removeReservedTimeSlot(startTime, endTime) {
+		for (let i = 0; i < this.reservedTimeslots.length; i++) {
+			if (
+				this.reservedTimeslots[i].startTime === startTime &&
+				this.reservedTimeslots[i].endTime === endTime
+			) {
+				this.reservedTimeslots.splice(i, 1);
+			}
+		}
+	}
 }
 
 export default SoccerField;

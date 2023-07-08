@@ -1,4 +1,3 @@
-import Reservation from "../model/Reservation.js";
 import app1 from "./index.js";
 
 /*
@@ -7,22 +6,19 @@ import app1 from "./index.js";
 
 // Get all available time slots
 const timeslots = app1.getAvailableTimeSlots();
-// console.log(timeslots);
 
 // Select a time slot
 const selectedTimeSlot = timeslots[0];
-console.log(selectedTimeSlot);
 
 // Get available fields for selected time slot
 const b = app1.getAvailableFieldsByDate(
 	selectedTimeSlot["startTime"],
 	selectedTimeSlot["endTime"]
 );
-// b.map((b) => console.log(b["name"]));
 
 // Reserve a field
 app1.createReservation(
-	10,
+	13,
 	3,
 	new Date().toLocaleString(),
 	selectedTimeSlot["startTime"],
@@ -30,11 +26,26 @@ app1.createReservation(
 	1
 );
 
-console.log("\n");
-
 // Check if field was reserved
 const z = app1.getAvailableFieldsByDate(
 	selectedTimeSlot["startTime"],
 	selectedTimeSlot["endTime"]
 );
-z.map((z) => console.log(z["name"]));
+// console.log(z);
+
+// Delete reservation and check if field is available again
+app1.deleteReservation(6);
+const f = app1.getAvailableFieldsByDate(
+	"7/8/2023, 5:00:00 PM",
+	"7/8/2023, 6:00:00 PM"
+);
+console.log(f);
+
+app1.createReservation(
+	43,
+	4,
+	new Date().toLocaleString(),
+	"7/8/2023, 5:00:00 PM",
+	"7/8/2023, 6:00:00 PM",
+	1
+);

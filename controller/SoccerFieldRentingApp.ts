@@ -60,7 +60,6 @@ class SoccerFieldRentingApp implements SoccerFieldRentingAppT {
 	getCustomerReservations(customerID) {
 		const customerReservations = [];
 		// get customer by id
-
 		for (const reservation of this._reservations) {
 			if (reservation.customerID === customerID) {
 				customerReservations.push(reservation);
@@ -69,7 +68,6 @@ class SoccerFieldRentingApp implements SoccerFieldRentingAppT {
 		return customerReservations;
 	}
 
-	// DONE:
 	getAvailableTimeSlots() {
 		// Iterate through timeslots
 		// Get available fields for each timeslot
@@ -92,7 +90,6 @@ class SoccerFieldRentingApp implements SoccerFieldRentingAppT {
 		return availableTimeSlots;
 	}
 
-	// DONE:
 	getAvailableFieldsByDate(startTime, endTime) {
 		const availableFields = [];
 		for (const soccerField of this._soccerFields) {
@@ -105,7 +102,23 @@ class SoccerFieldRentingApp implements SoccerFieldRentingAppT {
 		return availableFields;
 	}
 
-	// DONE:
+	deleteReservation(reservationID) {
+		const reservation = this._reservations.find(
+			(reservation) => reservation.id === reservationID
+		);
+		const soccerField = this._soccerFields.find(
+			(field) => field.id === reservation.soccerFieldID
+		);
+		soccerField.removeReservedTimeSlot(
+			reservation.startTime,
+			reservation.endTime
+		);
+		this._reservations = this._reservations.filter(
+			(reservation) => reservation.id !== reservationID
+		);
+		return reservation;
+	}
+
 	calculateTimeSlots(currentDate, startTime, endTime, slotDuration) {
 		const timeSlots = [];
 

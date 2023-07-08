@@ -16,6 +16,7 @@ interface SoccerFieldT {
 	reservedTimeslots: { startTime: string; endTime: string }[];
 	isAvailable: (startTime: string, endTime: string) => boolean;
 	addReservedTimeSlot: (startTime: string, endTime: string) => void;
+	removeReservedTimeSlot: (startTime: string, endTime: string) => void;
 }
 
 interface CustomerT {

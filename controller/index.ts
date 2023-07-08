@@ -76,7 +76,7 @@ const reservation3 = new Reservation(
 );
 
 const reservation4 = new Reservation(
-	1,
+	4,
 	2,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -86,7 +86,7 @@ const reservation4 = new Reservation(
 );
 
 const reservation5 = new Reservation(
-	1,
+	5,
 	3,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -96,7 +96,7 @@ const reservation5 = new Reservation(
 );
 
 const reservation6 = new Reservation(
-	1,
+	6,
 	4,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -105,7 +105,7 @@ const reservation6 = new Reservation(
 	1
 );
 const reservation7 = new Reservation(
-	1,
+	7,
 	5,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -114,7 +114,7 @@ const reservation7 = new Reservation(
 	1
 );
 const reservation8 = new Reservation(
-	1,
+	8,
 	6,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -123,7 +123,7 @@ const reservation8 = new Reservation(
 	1
 );
 const reservation9 = new Reservation(
-	1,
+	9,
 	7,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -132,7 +132,7 @@ const reservation9 = new Reservation(
 	1
 );
 const reservation10 = new Reservation(
-	1,
+	10,
 	8,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -141,7 +141,7 @@ const reservation10 = new Reservation(
 	1
 );
 const reservation11 = new Reservation(
-	1,
+	11,
 	9,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
@@ -150,7 +150,7 @@ const reservation11 = new Reservation(
 	1
 );
 const reservation12 = new Reservation(
-	1,
+	12,
 	10,
 	"7/8/2023, 4:04:58 AM",
 	"7/8/2023, 5:00:00 PM",
