@@ -2,14 +2,7 @@ interface SoccerFieldRentingAppT {
 	_soccerFields: SoccerFieldT[];
 	_reservations: ReservationT[];
 	_customers: CustomerT[];
-	addFields(soccerField: SoccerFieldT[]): void;
-	addReservation(reservation: ReservationT[]): void;
-	addCustomer(customer: CustomerT[]): void;
-	getAvailableSoccerFields(
-		date: string,
-		startTime: string,
-		endTime: string
-	): SoccerFieldT[] | void;
+	_timeslots: { startTime: string; endTime: string }[];
 }
 
 interface SoccerFieldT {
@@ -18,6 +11,11 @@ interface SoccerFieldT {
 	location: string;
 	price: number;
 	size: number;
+	capacity: number;
+	timeslots: { startTime: string; endTime: string }[];
+	reservedTimeslots: { startTime: string; endTime: string }[];
+	isAvailable: (startTime: string, endTime: string) => boolean;
+	addReservedTimeSlot: (startTime: string, endTime: string) => void;
 }
 
 interface CustomerT {
@@ -34,7 +32,7 @@ interface ReservationT {
 	date: string;
 	startTime: string;
 	endTime: string;
-	soccerField: SoccerFieldT;
+	soccerFieldID: number;
 	price: number;
-	customer: CustomerT;
+	customerID: number;
 }

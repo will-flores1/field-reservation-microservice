@@ -1,12 +1,12 @@
 class Reservation {
-    constructor(id, soccerField, date, startTime, endTime, price, customer) {
+    constructor(id, soccerFieldID, date, startTime, endTime, price, customerID) {
         this.id = id;
-        this.date = date;
+        this.date = new Date().toLocaleString();
         this.startTime = startTime;
         this.endTime = endTime;
-        this.soccerField = soccerField;
+        this.soccerFieldID = soccerFieldID;
         this.price = price;
-        this.customer = customer;
+        this.customerID = customerID;
     }
 }
 export default Reservation;
