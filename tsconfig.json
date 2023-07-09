@@ -8,6 +8,6 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["controller/*", "model/*", "/**/*.ts"],
+  "include": ["controllers/*", "models/*","config/*.ts", "/*/*.ts", "*.ts"],
   "exclude": ["node_modules"]
 }

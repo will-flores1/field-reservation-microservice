@@ -39,7 +39,7 @@ const f = app1.getAvailableFieldsByDate(
 	"7/8/2023, 5:00:00 PM",
 	"7/8/2023, 6:00:00 PM"
 );
-console.log(f);
+// console.log(f);
 
 app1.createReservation(
 	43,

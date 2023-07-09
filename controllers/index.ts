@@ -1,26 +1,19 @@
 import SoccerFieldRentingApp from "./SoccerFieldRentingApp.js";
-import SoccerField from "../model/SoccerField.js";
-import Customer from "../model/Customer.js";
-import Reservation from "../model/Reservation.js";
+import SoccerField from "../models/SoccerField.js";
+import Customer from "../models/Customer.js";
+import Reservation from "../models/Reservation.js";
 
 // Create objects
-const soccerField1 = new SoccerField(1, "Field 1", "Location 1", 12, 100, 12);
-const soccerField2 = new SoccerField(2, "Field 2", "Location 2", 12, 100, 12);
-const soccerField3 = new SoccerField(3, "Field 3", "Location 3", 12, 100, 12);
-const soccerField5 = new SoccerField(5, "Field 5", "Location 5", 12, 100, 12);
-const soccerField6 = new SoccerField(6, "Field 6", "Location 6", 12, 100, 12);
-const soccerField4 = new SoccerField(4, "Field 4", "Location 4", 12, 100, 12);
-const soccerField7 = new SoccerField(7, "Field 7", "Location 7", 12, 100, 12);
-const soccerField8 = new SoccerField(8, "Field 8", "Location 8", 12, 100, 12);
-const soccerField9 = new SoccerField(9, "Field 9", "Location 9", 12, 100, 12);
-const soccerField10 = new SoccerField(
-	10,
-	"Field 10",
-	"Location 10",
-	12,
-	100,
-	10
-);
+const soccerField1 = new SoccerField(1, "Field 1", "Location 1", 12, 100);
+const soccerField2 = new SoccerField(2, "Field 2", "Location 2", 12, 100);
+const soccerField3 = new SoccerField(3, "Field 3", "Location 3", 12, 100);
+const soccerField5 = new SoccerField(5, "Field 5", "Location 5", 12, 100);
+const soccerField6 = new SoccerField(6, "Field 6", "Location 6", 12, 100);
+const soccerField4 = new SoccerField(4, "Field 4", "Location 4", 12, 100);
+const soccerField7 = new SoccerField(7, "Field 7", "Location 7", 12, 100);
+const soccerField8 = new SoccerField(8, "Field 8", "Location 8", 12, 100);
+const soccerField9 = new SoccerField(9, "Field 9", "Location 9", 12, 100);
+const soccerField10 = new SoccerField(10, "Field 10", "Location 10", 12, 100);
 
 const customer1 = new Customer(
 	1,

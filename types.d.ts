@@ -10,9 +10,7 @@ interface SoccerFieldT {
 	name: string;
 	location: string;
 	price: number;
-	size: number;
 	capacity: number;
-	timeslots: { startTime: string; endTime: string }[];
 	reservedTimeslots: { startTime: string; endTime: string }[];
 	isAvailable: (startTime: string, endTime: string) => boolean;
 	addReservedTimeSlot: (startTime: string, endTime: string) => void;

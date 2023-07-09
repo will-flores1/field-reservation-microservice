@@ -1,5 +1,5 @@
-import Customer from "../model/Customer.js";
-import Reservation from "../model/Reservation.js";
+import Customer from "../models/Customer.js";
+import Reservation from "../models/Reservation.js";
 
 class SoccerFieldRentingApp implements SoccerFieldRentingAppT {
 	_soccerFields: SoccerFieldT[];

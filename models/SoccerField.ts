@@ -4,17 +4,14 @@ class SoccerField implements SoccerFieldT {
 	location: string;
 	capacity: number;
 	price: number;
-	size: number;
-	timeslots: { startTime: string; endTime: string }[];
 	reservedTimeslots: { startTime: string; endTime: string }[];
 
-	constructor(id, name, location, capacity, price, size) {
+	constructor(id, name, location, capacity, price) {
 		this.id = id;
 		this.name = name;
 		this.location = location;
 		this.capacity = capacity;
 		this.price = price;
-		this.size = size;
 
 		this.reservedTimeslots = [];
 	}
